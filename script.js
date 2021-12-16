@@ -10,6 +10,9 @@ var outputBox=document.querySelector("#output_box")
 ;
 submitBtn.addEventListener('click',submitHandler);
 function submitHandler() {
+    if(ip<0 || qty<0 || curr<0){
+        outputBox.innerText("plese enter the valid values");
+    }
     var ip=Number(intialPrice.value);
     var qty=Number(stockQuantity.value);
     var curr=Number(currentPrice.value);
